@@ -76,7 +76,16 @@ angular.module('Sityoo', ['ionic', 'Sityoo.controllers', 'Sityoo.services', 'lea
           controller: 'AccountCtrl'
         }
       }
-    });
+    })
+    .state('tab.unete', {
+      url: '/unete',
+      views: {
+        'tab-unete': {
+          templateUrl: 'views/unete.html',
+          controller: 'UneteCtrl'
+        }
+      }
+    });    
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
