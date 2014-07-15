@@ -88,6 +88,10 @@ angular.module('Sityoo', ['ionic', 'Sityoo.controllers', 'Sityoo.services', 'lea
     });    
 
   // if none of the above states are matched, use this as the fallback
+  .when('/user', {
+    templateUrl: 'views/user.html',
+    controller: 'UserCtrl'
+  })
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
