@@ -6,3 +6,14 @@
   width: 96px;
   height: 96px;
 }
+
+.rosali{
+	background: rgba(247,234,247,1);
+	background: -moz-linear-gradient(top, rgba(247,234,247,1) 0%, rgba(250,242,250,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(247,234,247,1)), color-stop(100%, rgba(250,242,250,1)));
+	background: -webkit-linear-gradient(top, rgba(247,234,247,1) 0%, rgba(250,242,250,1) 100%);
+	background: -o-linear-gradient(top, rgba(247,234,247,1) 0%, rgba(250,242,250,1) 100%);
+	background: -ms-linear-gradient(top, rgba(247,234,247,1) 0%, rgba(250,242,250,1) 100%);
+	background: linear-gradient(to bottom, rgba(247,234,247,1) 0%, rgba(250,242,250,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7eaf7', endColorstr='#faf2fa', GradientType=0 );
+}
