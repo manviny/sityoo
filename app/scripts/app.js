@@ -34,7 +34,7 @@ angular.module('Sityoo', ['ionic', 'Sityoo.controllers', 'Sityoo.services', 'lea
     .state('tab', {
       url: '/tab',
       abstract: true,
-      templateUrl: 'templates/tabs.html'
+      templateUrl: 'views/tabs.html'
     })
 
     // Each tab has its own nav history stack:
@@ -43,7 +43,7 @@ angular.module('Sityoo', ['ionic', 'Sityoo.controllers', 'Sityoo.services', 'lea
       url: '/dash',
       views: {
         'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
+          templateUrl: 'views/tab-dash.html',
           controller: 'DashCtrl'
         }
       }
@@ -53,7 +53,7 @@ angular.module('Sityoo', ['ionic', 'Sityoo.controllers', 'Sityoo.services', 'lea
       url: '/friends',
       views: {
         'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
+          templateUrl: 'views/tab-friends.html',
           controller: 'FriendsCtrl'
         }
       }
@@ -62,7 +62,7 @@ angular.module('Sityoo', ['ionic', 'Sityoo.controllers', 'Sityoo.services', 'lea
       url: '/friend/:friendId',
       views: {
         'tab-friends': {
-          templateUrl: 'templates/friend-detail.html',
+          templateUrl: 'views/friend-detail.html',
           controller: 'FriendDetailCtrl'
         }
       }
@@ -72,7 +72,7 @@ angular.module('Sityoo', ['ionic', 'Sityoo.controllers', 'Sityoo.services', 'lea
       url: '/account',
       views: {
         'tab-account': {
-          templateUrl: 'templates/tab-account.html',
+          templateUrl: 'views/tab-account.html',
           controller: 'AccountCtrl'
         }
       }
