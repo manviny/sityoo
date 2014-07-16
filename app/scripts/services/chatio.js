@@ -7,7 +7,7 @@
  * # chatIO
  * Factory in the sityooApp.
  */
-angular.module('Sityoo.controllers')
+angular.module('Sityoo.services')
   .factory('chatIO', function ($q, $cordovaGeolocation, $cordovaDialogs, $rootScope) { 
 
                   
