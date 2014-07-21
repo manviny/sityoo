@@ -68,12 +68,16 @@ angular.module('Sityoo.services')
     var showTabbar = function (){ $rootScope.tabbarShouldHide = "false"; };    
     var hideTabbar = function (){ $rootScope.tabbarShouldHide = "true"; }; 
     
+    /**
+     * [getChatsAbiertos chats activos en la BD]
+     * @return {[type]} [description]
+     */
     var getChatsAbiertos = function (){
         var deferred = $q.defer();
         dpd.chatsabiertos.get(function(chatsabiertos) { // chats desde BD
             $cordovaGeolocation.getCurrentPosition().then(function(position) { // posicion del user
                 userPosition = position; 
-                chatsOrdenados = _.map( _.sortBy(chatsabiertos, function(items){  
+                var chatsOrdenados = _.map( _.sortBy(chatsabiertos, function(items){  
                     // 1.- calcula distancias
                     items.distance = Math.sqrt (Math.pow( (items.latitude-(userPosition.coords.latitude)),2) + Math.pow( (items.longitude-(userPosition.coords.longitude)),2)) * 100;
                     // 2.- colores de los marcadores

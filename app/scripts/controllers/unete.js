@@ -8,10 +8,16 @@
  * Controller of the sityooApp
  */
 angular.module('Sityoo.controllers')
-  .controller('UneteCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('UneteCtrl', function ($scope, chatIO, $cordovaDialogs, $filter) {
+
+
+        //IMPORTANTE  si hay ya chatsOrdenados -> carga de variable  y no de promise
+        
+        chatIO.getChatsAbiertos()
+        .then(function(chats){
+        	console.debug("chats", chats);
+            $scope.chatsOrdenados = chats; 
+        });
+
+
   });
