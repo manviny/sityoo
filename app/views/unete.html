@@ -1,1 +1,52 @@
-<ons-navigator title="Home" page="views/page1.html"></ons-navigator>
+
+<ons-page class="center" ng-controller="UneteCtrl">
+<ons-navigator 
+    title="Chats cercanos"
+    left-button-icon="fa fa-lg fa-plus"
+    on-left-button-click="nuevoChat()"    
+    right-button-icon="fa fa-lg fa-refresh"
+    on-right-button-click="refreshChat()">
+
+
+    <ons-list>
+        <!--<h3>Chats cercanos</h3>eventuales|fijos|buscar-->
+        
+        <ons-row><ons-col>
+        <ons-search-input 
+            ng-model="search.title" 
+            style="height:50px; font-size:1.4em; background-color:#fbf9d9"
+            placeholder="Buscar">
+        </ons-search-input>
+        </ons-col></ons-row>
+        <ons-list-item ng-repeat="chat in chatsOrdenados | filter:search:strict"  class="topcoat-list__item__line-height rosali">
+
+            
+            <ons-row>   
+            
+                <!--col1-->
+                <ons-col align="center" size="25" ng-click="ons.navigator.pushPage('localiza.html', {title:chat.title, latitude:chat.latitude, longitude:chat.longitude })">
+                    <ons-button style="line-height: 16px;padding:8px 2px; margin-top:6px; width:85%; background-color:{{chat.color}}; ">{{chat.distance|enKm}}</ons-button>        
+                </ons-col>  
+ 
+                 
+                <!--col2-->
+                <!--<input type="hidden" ng-model="idChat" value="{{chat.id}}">-->
+                <ons-col size="67" class="left" style="padding-left:10px" ng-click="ons.navigator.pushPage('chatroom.html', { title: chat.title, chatID: chat.id })">
+                    <ons-row><ons-col><span style="color: #69F; font-weight:bold; font-size:1.3em">{{chat.title}}</span></ons-col></ons-row>
+                    <ons-row><ons-col>{{chat.creationtime}} ({{chat.creator}})</ons-col></ons-row>    
+                </ons-col>   
+                    
+                <!--col3-->
+                <ons-col align="center"><ons-icon icon="angle-right"  size="2x" style="color: #69F;"></ons-icon></ons-col>  
+                
+            </ons-row>            
+            
+            
+        </ons-list-item>
+
+    </ons-list>
+   
+
+
+</ons-navigator>
+</ons-page>
