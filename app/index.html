@@ -20,30 +20,10 @@
     <!-- endbuild -->
   </head>
 
-  <body ng-app="Sityoo">
+  <body ng-app="sityooApp">
 
 
-  <ons-screen>
-
-    <ons-tabbar>
-      <ons-tabbar-item
-              active="true"
-              label="Home"
-              icon="home"
-              page="navigator1.html"></ons-tabbar-item>
-
-      <ons-tabbar-item
-          label="Camera"
-              icon="camera"
-              page="page2.html"></ons-tabbar-item>
-
-      <ons-tabbar-item
-          label="Settings"
-              icon="gear"
-              page="page3.html"></ons-tabbar-item>
-    </ons-tabbar>
-    
-  </ons-screen>
+    <ons-screen page="views/tab_bar.html"></ons-screen>
 
     <!-- build:js scripts/vendor.js -->
     <!-- <script src="vendor/someContribJs.js"></script> -->
@@ -68,9 +48,13 @@
     <script src="scripts/services.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="http://sityoo.com/dpd.js"></script>
-    <script src="scripts/controllers/unete.js"></script>
     <script src="scripts/services/chatio.js"></script>
     <script src="scripts/filters/enkm.js"></script>
+    <script src="scripts/controllers/unete.js"></script>
+    <script src="scripts/controllers/localiza.js"></script>
+    <script src="scripts/controllers/share.js"></script>
+    <script src="scripts/controllers/user.js"></script>
+    <script src="scripts/controllers/info.js"></script>
     <!-- endbuild -->
 
     <!-- cordova script (this will be a 404 during development) -->

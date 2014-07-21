@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name sityooApp.controller:UneteCtrl
+ * @name sityooApp.controller:InfoCtrl
  * @description
- * # UneteCtrl
+ * # InfoCtrl
  * Controller of the sityooApp
  */
 angular.module('sityooApp')
-  .controller('UneteCtrl', function ($scope) {
+  .controller('InfoCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

@@ -6,5 +6,5 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('Sityoo', ['onsen.directives', 'leaflet-directive', 'ngCordova']);
+angular.module('sityooApp', ['onsen.directives', 'leaflet-directive', 'ngCordova']);
 
