@@ -8,7 +8,7 @@
  * # enKm
  * Filter in the sityooApp.
  */
-angular.module('Sityoo.services')
+angular.module('sityooApp')
   .filter('enKm', function () {
     return function(distancia) {
         if (distancia == "" || distancia == null) return "";
